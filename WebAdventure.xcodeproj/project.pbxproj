@@ -11,9 +11,19 @@
 		E880445F29A67CDB001FEFA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880445E29A67CDB001FEFA7 /* AppDelegate.swift */; };
 		E880446129A67CDB001FEFA7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880446029A67CDB001FEFA7 /* SceneDelegate.swift */; };
 		E880446329A67CDB001FEFA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880446229A67CDB001FEFA7 /* ViewController.swift */; };
-		E880446629A67CDB001FEFA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E880446429A67CDB001FEFA7 /* Main.storyboard */; };
 		E880446829A67CDE001FEFA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E880446729A67CDE001FEFA7 /* Assets.xcassets */; };
 		E880446B29A67CDE001FEFA7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E880446929A67CDE001FEFA7 /* LaunchScreen.storyboard */; };
+		E880447A29A67F8F001FEFA7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880447929A67F8F001FEFA7 /* Extensions.swift */; };
+		E880447E29A67FB6001FEFA7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880447D29A67FB6001FEFA7 /* NetworkService.swift */; };
+		E880448029A67FE0001FEFA7 /* DecoderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880447F29A67FE0001FEFA7 /* DecoderService.swift */; };
+		E880448329A67FFF001FEFA7 /* KeychainService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880448229A67FFF001FEFA7 /* KeychainService.swift */; };
+		E880448529A680C8001FEFA7 /* ModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880448429A680C8001FEFA7 /* ModuleBuilder.swift */; };
+		E880448729A68114001FEFA7 /* AuthViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880448629A68114001FEFA7 /* AuthViewPresenter.swift */; };
+		E880448929A68128001FEFA7 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880448829A68128001FEFA7 /* AuthViewController.swift */; };
+		E880448B29A68254001FEFA7 /* AuthAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880448A29A68254001FEFA7 /* AuthAPIService.swift */; };
+		E880448F29A6829A001FEFA7 /* Responses.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880448E29A6829A001FEFA7 /* Responses.swift */; };
+		E880449129A682A1001FEFA7 /* Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880449029A682A1001FEFA7 /* Requests.swift */; };
+		E880449629A6843E001FEFA7 /* AuthEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880449529A6843E001FEFA7 /* AuthEndpoints.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,10 +34,20 @@
 		E880445E29A67CDB001FEFA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E880446029A67CDB001FEFA7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E880446229A67CDB001FEFA7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E880446529A67CDB001FEFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E880446729A67CDE001FEFA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E880446A29A67CDE001FEFA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E880446C29A67CDE001FEFA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E880447929A67F8F001FEFA7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E880447D29A67FB6001FEFA7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E880447F29A67FE0001FEFA7 /* DecoderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecoderService.swift; sourceTree = "<group>"; };
+		E880448229A67FFF001FEFA7 /* KeychainService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainService.swift; sourceTree = "<group>"; };
+		E880448429A680C8001FEFA7 /* ModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleBuilder.swift; sourceTree = "<group>"; };
+		E880448629A68114001FEFA7 /* AuthViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewPresenter.swift; sourceTree = "<group>"; };
+		E880448829A68128001FEFA7 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		E880448A29A68254001FEFA7 /* AuthAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAPIService.swift; sourceTree = "<group>"; };
+		E880448E29A6829A001FEFA7 /* Responses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responses.swift; sourceTree = "<group>"; };
+		E880449029A682A1001FEFA7 /* Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requests.swift; sourceTree = "<group>"; };
+		E880449529A6843E001FEFA7 /* AuthEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEndpoints.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +76,6 @@
 				9EA5EDC351941EFC7780A0D7 /* Pods-WebAdventure.debug.xcconfig */,
 				B7A3D5F36174A25BE9244B4D /* Pods-WebAdventure.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +100,113 @@
 		E880445D29A67CDB001FEFA7 /* WebAdventure */ = {
 			isa = PBXGroup;
 			children = (
+				E880447229A67E12001FEFA7 /* Application */,
+				E880447429A67F4F001FEFA7 /* Core */,
+				E880447529A67F59001FEFA7 /* PresentationLayer */,
+			);
+			path = WebAdventure;
+			sourceTree = "<group>";
+		};
+		E880447229A67E12001FEFA7 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				E880445E29A67CDB001FEFA7 /* AppDelegate.swift */,
 				E880446029A67CDB001FEFA7 /* SceneDelegate.swift */,
 				E880446229A67CDB001FEFA7 /* ViewController.swift */,
-				E880446429A67CDB001FEFA7 /* Main.storyboard */,
+				E880446C29A67CDE001FEFA7 /* Info.plist */,
+				E880447329A67E1E001FEFA7 /* Resources */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		E880447329A67E1E001FEFA7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				E880446729A67CDE001FEFA7 /* Assets.xcassets */,
 				E880446929A67CDE001FEFA7 /* LaunchScreen.storyboard */,
-				E880446C29A67CDE001FEFA7 /* Info.plist */,
 			);
-			path = WebAdventure;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E880447429A67F4F001FEFA7 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				E880447B29A67F9D001FEFA7 /* ServiceLayer */,
+				E880447829A67F7F001FEFA7 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		E880447529A67F59001FEFA7 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E880448429A680C8001FEFA7 /* ModuleBuilder.swift */,
+				E880447729A67F6D001FEFA7 /* InfoModule */,
+				E880447629A67F66001FEFA7 /* AuthModule */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		E880447629A67F66001FEFA7 /* AuthModule */ = {
+			isa = PBXGroup;
+			children = (
+				E880448629A68114001FEFA7 /* AuthViewPresenter.swift */,
+				E880448829A68128001FEFA7 /* AuthViewController.swift */,
+			);
+			path = AuthModule;
+			sourceTree = "<group>";
+		};
+		E880447729A67F6D001FEFA7 /* InfoModule */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = InfoModule;
+			sourceTree = "<group>";
+		};
+		E880447829A67F7F001FEFA7 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E880447929A67F8F001FEFA7 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E880447B29A67F9D001FEFA7 /* ServiceLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E880449229A683F4001FEFA7 /* NetworkService */,
+				E880449429A6841D001FEFA7 /* APIServices */,
+				E880449329A6840A001FEFA7 /* MoyaService */,
+				E880447F29A67FE0001FEFA7 /* DecoderService.swift */,
+				E880448229A67FFF001FEFA7 /* KeychainService.swift */,
+			);
+			path = ServiceLayer;
+			sourceTree = "<group>";
+		};
+		E880449229A683F4001FEFA7 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				E880447D29A67FB6001FEFA7 /* NetworkService.swift */,
+				E880449029A682A1001FEFA7 /* Requests.swift */,
+				E880448E29A6829A001FEFA7 /* Responses.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		E880449329A6840A001FEFA7 /* MoyaService */ = {
+			isa = PBXGroup;
+			children = (
+				E880449529A6843E001FEFA7 /* AuthEndpoints.swift */,
+			);
+			path = MoyaService;
+			sourceTree = "<group>";
+		};
+		E880449429A6841D001FEFA7 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				E880448A29A68254001FEFA7 /* AuthAPIService.swift */,
+			);
+			path = APIServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +271,6 @@
 			files = (
 				E880446B29A67CDE001FEFA7 /* LaunchScreen.storyboard in Resources */,
 				E880446829A67CDE001FEFA7 /* Assets.xcassets in Resources */,
-				E880446629A67CDB001FEFA7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,23 +323,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E880448F29A6829A001FEFA7 /* Responses.swift in Sources */,
+				E880447E29A67FB6001FEFA7 /* NetworkService.swift in Sources */,
+				E880448729A68114001FEFA7 /* AuthViewPresenter.swift in Sources */,
+				E880448B29A68254001FEFA7 /* AuthAPIService.swift in Sources */,
+				E880449129A682A1001FEFA7 /* Requests.swift in Sources */,
+				E880448929A68128001FEFA7 /* AuthViewController.swift in Sources */,
+				E880449629A6843E001FEFA7 /* AuthEndpoints.swift in Sources */,
 				E880446329A67CDB001FEFA7 /* ViewController.swift in Sources */,
 				E880445F29A67CDB001FEFA7 /* AppDelegate.swift in Sources */,
+				E880448529A680C8001FEFA7 /* ModuleBuilder.swift in Sources */,
 				E880446129A67CDB001FEFA7 /* SceneDelegate.swift in Sources */,
+				E880448329A67FFF001FEFA7 /* KeychainService.swift in Sources */,
+				E880448029A67FE0001FEFA7 /* DecoderService.swift in Sources */,
+				E880447A29A67F8F001FEFA7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E880446429A67CDB001FEFA7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E880446529A67CDB001FEFA7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E880446929A67CDE001FEFA7 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -358,10 +477,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WebAdventure/Info.plist;
+				INFOPLIST_FILE = WebAdventure/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -386,10 +504,9 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = WebAdventure/Info.plist;
+				INFOPLIST_FILE = WebAdventure/Application/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

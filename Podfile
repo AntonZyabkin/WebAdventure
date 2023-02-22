@@ -6,6 +6,6 @@ target 'WebAdventure' do
   use_frameworks!
 
   # Pods for WebAdventure
-  pod 'Moya', '~> 15.0'
+  pod 'Moya'
   pod 'SwiftKeychainWrapper'
 end

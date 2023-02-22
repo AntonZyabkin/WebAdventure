@@ -7,7 +7,7 @@ PODS:
   - SwiftKeychainWrapper (4.0.1)
 
 DEPENDENCIES:
-  - Moya (~> 15.0)
+  - Moya
   - SwiftKeychainWrapper
 
 SPEC REPOS:
@@ -21,6 +21,6 @@ SPEC CHECKSUMS:
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   SwiftKeychainWrapper: 807ba1d63c33a7d0613288512399cd1eda1e470c
 
-PODFILE CHECKSUM: 88da206b680f7282e347d51d1924f624fee04c9f
+PODFILE CHECKSUM: a5e8e32e4e33c3a53c1432a664d8bdbc34be794b
 
 COCOAPODS: 1.11.3
