@@ -10,11 +10,12 @@ import UIKit
 protocol AuthViewControllerProtocol: UIViewController{
     func configureCaptcha(with image: UIImage)
     func showErrorMessage(_ error: String)
-    func showAuthData(login: String, password: String)
 }
 
-class AuthViewController: UIViewController {
+final class AuthViewController: UIViewController {
     var presenter: AuthViewPresenterProtocol?
+    var loader: InfoViewPresenterProtocol?
+    
     var loginTextfield: UITextField = {
         let textfield = UITextField()
         textfield.backgroundColor = .white
@@ -47,7 +48,7 @@ class AuthViewController: UIViewController {
     private lazy var authButton: UIButton =  {
         let button = UIButton(type: .system)
         button.backgroundColor = .myPurpleBold
-        button.setTitle("Enter", for: .normal)
+        button.setTitle("Войти", for: .normal)
         button.titleLabel?.font = .mainHelvetica(size: 18)
         button.tintColor = .white
         button.layer.cornerRadius = 10
@@ -66,7 +67,6 @@ class AuthViewController: UIViewController {
     private lazy var captchaImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.backgroundColor = .red
-        imageView.image = UIImage(named: "bell")
         imageView.contentMode = .scaleAspectFill
         imageView.layer.cornerRadius = 10
         imageView.layer.masksToBounds = true
@@ -88,6 +88,10 @@ class AuthViewController: UIViewController {
         view.backgroundColor = .myPurpleLight
         configureView()
     }
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        loader?.startLoadUser()
+    }
     
     @objc
     func authRequest() {
@@ -101,28 +105,22 @@ class AuthViewController: UIViewController {
     
     private func configureView() {
         view.addSubview(authViewsStackView)
-        
-        authViewsStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 128).isActive = true
-        authViewsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16).isActive = true
-        authViewsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16).isActive = true
-        authViewsStackView.heightAnchor.constraint(equalToConstant: 512).isActive = true
+        NSLayoutConstraint.activate([
+            authViewsStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 128),
+            authViewsStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
+            authViewsStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            authViewsStackView.heightAnchor.constraint(equalToConstant: 512)
+        ])
         authViewsStackView.translatesAutoresizingMaskIntoConstraints = false
     }
 }
 
 extension AuthViewController: AuthViewControllerProtocol {
     func configureCaptcha(with image: UIImage) {
-        print("configureCaptcha")
         captchaImageView.image = image
     }
     
-    
     func showErrorMessage(_ error: String) {
         tipsLabel.text = error
-    }
-    
-    func showAuthData(login: String, password: String) {
-        loginTextfield.text = login
-        passwordTextfield.text = password
     }
 }

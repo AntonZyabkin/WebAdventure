@@ -13,7 +13,11 @@ struct AuthRequest: Codable {
     let captcha: Captcha
 }
 
-// MARK: - CAPTCHA
 struct Captcha: Codable {
     let key, value: String
+}
+
+//MARK: - UserRequest
+struct UserRequest: Codable {
+    let accessToken: String
 }

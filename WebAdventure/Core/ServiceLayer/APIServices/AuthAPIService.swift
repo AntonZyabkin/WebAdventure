@@ -7,14 +7,12 @@
 
 import Moya
 
-protocol AuthApiServicable {
+protocol ApiServicable {
     func sendAuthRequest(request: AuthRequest , complition: @escaping (Result<AuthResponce, Error>) -> Void)
     func sendCaptchaRequest(complition: @escaping (Result<CaptchaResponce, Error>) -> Void)
-
+    func sendUserRequest(request: UserRequest, complition: @escaping (Result<UserResponce, Error>) -> Void)
 }
-
-
-final class AuthApiService{
+final class ApiService{
     private let networkService: Networkable
 
     init(networkService: Networkable) {
@@ -22,7 +20,7 @@ final class AuthApiService{
     }
 }
 
-extension AuthApiService: AuthApiServicable {
+extension ApiService: ApiServicable {
 
     func sendAuthRequest(request: AuthRequest , complition: @escaping (Result<AuthResponce, Error>) -> Void) {
         networkService.request(AuthEndpoints.auth(request: request), complition: complition)
@@ -30,6 +28,8 @@ extension AuthApiService: AuthApiServicable {
     func sendCaptchaRequest(complition: @escaping (Result<CaptchaResponce, Error>) -> Void) {
         networkService.request(AuthEndpoints.captcha, complition: complition)
     }
-    
+    func sendUserRequest(request: UserRequest, complition: @escaping (Result<UserResponce, Error>) -> Void) {
+        networkService.request(AuthEndpoints.fetchUser(request: request), complition: complition)
+    }
 }
 

@@ -10,7 +10,7 @@ import Security
 import SwiftKeychainWrapper
 
 protocol KeychainServicable {
-    func save(_ value: String, for key: KeychainWrapper.Keys) -> Bool
+    func save(_ value: String, for key: KeychainWrapper.Keys)
     func fetch(for key: KeychainWrapper.Keys) -> String?
     func deleteItem(for key: KeychainWrapper.Keys) -> Bool
     func deleteAll() -> Bool
@@ -23,17 +23,11 @@ final class KeychainService{
     init(decoder: DecoderServicable) {
         self.decoder = decoder
     }
-    enum KeychainError: Error {
-        case itemNotFound
-        case duplicateItem
-        case invalidItemFormat
-        case unexpectedStatus(OSStatus)
-    }
 }
 
 extension KeychainService: KeychainServicable {
-    func save(_ value: String, for key: KeychainWrapper.Keys) -> Bool {
-        return KeychainWrapper.standard.set(value, forKey: key.rawValue)
+    func save(_ value: String, for key: KeychainWrapper.Keys) {
+        KeychainWrapper.standard.set(value, forKey: key.rawValue)
     }
     
     func fetch(for key: KeychainWrapper.Keys) -> String? {
@@ -51,15 +45,8 @@ extension KeychainService: KeychainServicable {
 
 extension KeychainWrapper {
     enum Keys: String {
-        case sbisSessionID = "X-SBISSessionID"
-        case sbisLogin = "sbisLogin"
-        case sbisPassword = "sbisPassword"
-        case tochkaAccessToken = "accessToken"
-        case tochkaJWT = "JWT"
-        case lastPaymentDate = "lastPaymentDate"
-        case tochkaAccountID = "accountID"
-        case ofdAuthToken = "ofdAuthToken"
-        case ofdLogin = "ofdLogin"
-        case ofdPassword = "ofdPassword"
+        case refreshToken = "refreshToken"
+        case accessToken = "accessToken"
+        case expiresIn = "expiresIn"
     }
 }

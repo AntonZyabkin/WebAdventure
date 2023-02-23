@@ -11,16 +11,18 @@ import Moya
 enum AuthEndpoints {
     case captcha
     case auth(request: AuthRequest)
+    case fetchUser(request: UserRequest)
 }
 
 extension AuthEndpoints: TargetType {
     
     var headers: [String : String]? {
         switch self {
-        case .captcha:
+        case .captcha, .auth:
             return [:]
-        case .auth(let request):
-            return [:]
+        case .fetchUser(let request):
+            return ["accept" : "application/json",
+                    "authorization" : "Bearer \(request.accessToken)"]
         }
     }
     
@@ -34,6 +36,8 @@ extension AuthEndpoints: TargetType {
             return "/v1/auth"
         case .captcha:
             return "/v1/captcha"
+        case .fetchUser:
+            return "/v1/user"
         }
     }
     
@@ -41,21 +45,21 @@ extension AuthEndpoints: TargetType {
         switch self {
         case .captcha, .auth:
             return .post
+        case .fetchUser:
+            return .get
         }
     }
     
     var parameters: [String: Any] {
         switch self {
-        case .captcha:
-            return [:]
-        case .auth:
+        case .captcha, .auth, .fetchUser:
             return [:]
         }
     }
     
     var task: Moya.Task {
         switch self {
-        case .captcha:
+        case .captcha, .fetchUser:
             return .requestPlain
         case .auth(let request):
             return requestCompositeParameters(request, parameters)

@@ -24,6 +24,7 @@ final class NetworkService {
 enum NetworkError: Error {
     case urlError
     case responseError
+    case statusCodeNot200
     case dataError
     case unknownError
 }
@@ -54,18 +55,7 @@ extension NetworkService: Networkable {
                     switch urlResponse.statusCode {
                     case 200...210:
                         self.decoderService.decode(response.data, complition: complition)
-                    case 300...399:
-                        print("Status code \(urlResponse.statusCode)")
-                        //TODO: закончить дерево решений по всем кодам
-                        //do something
-                        break
-                    case 400...499:
-                        print("Status code \(urlResponse.statusCode)")
-                        print(String(data: response.data, encoding: .utf8) ?? "String decode error")
-                        self.decoderService.decode(response.data, complition: complition)
-                        //do something
-                        break
-                    case 500...599:
+                    case 300...599:
                         print("Status code \(urlResponse.statusCode)")
                         self.decoderService.decode(response.data, complition: complition)
                         break

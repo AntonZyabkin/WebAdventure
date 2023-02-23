@@ -9,7 +9,7 @@ import Foundation
 // MARK: - CaptchaResponce
 struct CaptchaResponce: Codable {
     let resultCode, resultMessage: String
-    let data: DataClass
+    let data: CaptchaDataClass
 
     enum CodingKeys: String, CodingKey {
         case resultCode = "result_code"
@@ -18,8 +18,7 @@ struct CaptchaResponce: Codable {
     }
 }
 
-// MARK: - DataClass
-struct DataClass: Codable {
+struct CaptchaDataClass: Codable {
     let key, imageData: String
 
     enum CodingKeys: String, CodingKey {
@@ -31,7 +30,46 @@ struct DataClass: Codable {
 // MARK: - AuthResponce
 struct AuthResponce: Codable {
     let resultCode, resultMessage: String
+    let data: AuthDataClass?
+    let validation: Validation?
+    enum CodingKeys: String, CodingKey {
+        case resultCode = "result_code"
+        case resultMessage = "result_message"
+        case data, validation
+    }
+}
+struct AuthResponceSuccess: Codable {
+    let resultCode, resultMessage: String
     let data: AuthDataClass
+    enum CodingKeys: String, CodingKey {
+        case resultCode = "result_code"
+        case resultMessage = "result_message"
+        case data
+    }
+}
+
+struct AuthDataClass: Codable {
+    let tokenType: String?
+    let expiresIn: Int?
+    let accessToken, refreshToken: String?
+    let message: String?
+    enum CodingKeys: String, CodingKey {
+        case tokenType = "token_type"
+        case expiresIn = "expires_in"
+        case accessToken = "access_token"
+        case refreshToken = "refresh_token"
+        case message
+    }
+}
+struct Validation: Codable {
+    let username, password, captcha: [String]?
+}
+
+
+// MARK: - UserResponce
+struct UserResponce: Codable {
+    let resultCode, resultMessage: String
+    let data: UserDataClass
 
     enum CodingKeys: String, CodingKey {
         case resultCode = "result_code"
@@ -40,16 +78,10 @@ struct AuthResponce: Codable {
     }
 }
 
-// MARK: - DataClass
-struct AuthDataClass: Codable {
-    let tokenType: String
-    let expiresIn: Int
-    let accessToken, refreshToken: String
+struct UserDataClass: Codable {
+    let profile: Profile
+}
 
-    enum CodingKeys: String, CodingKey {
-        case tokenType = "token_type"
-        case expiresIn = "expires_in"
-        case accessToken = "access_token"
-        case refreshToken = "refresh_token"
-    }
+struct Profile: Codable {
+    let name: String
 }

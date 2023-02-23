@@ -23,14 +23,6 @@ extension UIFont {
         guard let font = UIFont(name: "Helvetica", size: size) else { return UIFont() }
         return font
     }
-    static func mainLightHelvetica(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "Helvetica-Light", size: size) else { return UIFont() }
-        return font
-    }
-    static func mainBoldHelvetica(size: CGFloat) -> UIFont {
-        guard let font = UIFont(name: "TimesNewRomanPS-BoldMT", size: size) else { return UIFont() }
-        return font
-    }
 }
 
 extension UIColor {
